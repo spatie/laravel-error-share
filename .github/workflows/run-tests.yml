@@ -48,7 +48,7 @@ jobs:
         run: composer show -D
 
       - name: Make sure our test classes are autoloaded
-        run: composer dump-autoload
+        run: composer dump-autoload -o
 
       - name: Execute tests
         run: vendor/bin/pest --ci
