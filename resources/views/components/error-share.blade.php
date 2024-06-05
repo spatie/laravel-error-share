@@ -1,7 +1,7 @@
 @php
     $properties = app(\Spatie\LaravelErrorShare\Actions\ResolveErrorSharePropertiesAction::class)->execute($exception);
 @endphp
-@unless(array_key_exists('error', $properties))
+@unless(array_key_exists('error', $properties) || config('error-share.enabled') === false)
     <div
         x-data="{
             sharePanelOpen: false,
