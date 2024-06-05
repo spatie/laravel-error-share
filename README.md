@@ -1,11 +1,15 @@
-# Share your Laravel errors to Flare like in the old days
+# Share your Laravel errors
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-error-share.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-error-share)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/spatie/laravel-error-share/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/spatie/laravel-error-share/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/spatie/laravel-error-share/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/spatie/laravel-error-share/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-error-share.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-error-share)
 
-With the introduction of the new error page in Laravel 11 the old error sharing functionality was removed. This package brings back the ability to share your Laravel errors to Flare.
+Imagine that you’re working on a project locally and that you bump into an exception. You try to figure out what the problem is, but you’re unable to find a solution. In that case, you might want to ask a colleague for help. 
+
+Instead of immediately start screen sharing with your colleague (or letting your colleague roll their chair to your desk if you work in office), it might be handy to just send a link to your colleague where he or she can see that exception in detail. 
+
+<TODO: add screenshot here>
 
 ## Support us
 
@@ -23,7 +27,7 @@ You can install the package via composer:
 composer require spatie/laravel-error-share
 ```
 
-That's it. Trigger an error and now you'll see a share button, happy coding!
+That's it. Trigger an error and now you'll see a share button.
 
 ## Testing
 
