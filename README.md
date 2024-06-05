@@ -9,7 +9,7 @@ Imagine that you’re working on a project locally and that you bump into an exc
 
 Instead of immediately start screen sharing with your colleague (or letting your colleague roll their chair to your desk if you work in office), it might be handy to just send a link to your colleague where he or she can see that exception in detail. 
 
-<TODO: add screenshot here>
+![Screenshot of Laravel Error Share](https://github.com/spatie/laravel-error-share/assets/1561079/99cc3fdb-b1df-4b14-a89f-229bbe79dabc)
 
 ## Support us
 
