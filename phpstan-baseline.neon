@@ -1,0 +1,6 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Parameter \\#1 \\$json of function json_decode expects string, array\\<string, mixed\\> given\\.$#"
+			count: 1
+			path: src/Actions/MapLaravelExceptionAction.php

@@ -8,11 +8,9 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class LaravelErrorShareServiceProvider extends PackageServiceProvider
 {
-    public function register()
+    public function registeringPackage(): void
     {
         View::prependNamespace('laravel-exceptions-renderer', [__DIR__.'/../resources/views']);
-
-        return parent::register();
     }
 
     public function configurePackage(Package $package): void
