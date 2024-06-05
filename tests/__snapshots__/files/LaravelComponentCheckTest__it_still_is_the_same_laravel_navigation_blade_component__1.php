@@ -1,26 +1,28 @@
-<x-laravel-exceptions-renderer::card>
-    <div class="md:flex md:items-center md:justify-between md:gap-2">
-        <div>
-            <div class="inline-block rounded-full bg-red-500/20 px-3 py-2 dark:bg-red-500/20">
-                <span class="hidden text-sm font-bold leading-5 text-red-500 md:inline-block lg:text-base">
-                    {{ $exception->class() }}
-                </span>
-                <span class="text-sm font-bold leading-5 text-red-500 md:hidden lg:text-base">
-                    {{ implode(' ', array_slice(explode('\\', $exception->class()), -1)) }}
-                </span>
-            </div>
-            <div class="mt-4 text-lg font-semibold text-gray-900 dark:text-white lg:text-2xl">{{ $exception->message() }}</div>
-        </div>
+<header class="mt-3 px-5 sm:mt-10">
+    <div class="py-3 dark:border-gray-900 sm:py-5">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center">
+                <div class="rounded-full bg-red-500/20 p-4 dark:bg-red-500/20">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="h-6 w-6 fill-red-500 text-gray-50 dark:text-gray-950"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+                    </svg>
+                </div>
 
-        <div class="hidden text-right md:block md:min-w-64">
-            <div>
-                <span class="rounded-full bg-gray-200 px-3 py-2 text-sm leading-5 text-gray-900 dark:bg-gray-800 dark:text-white">
-                    {{ $exception->request()->method() }} {{ $exception->request()->httpHost() }}
+                <span class="text-dark ml-3 text-2xl font-bold dark:text-white sm:text-3xl">
+                    {{ $exception->title() }}
                 </span>
             </div>
-            <div class="mt-4 px-4">
-                <span class="text-sm text-gray-500 dark:text-gray-400">PHP {{ PHP_VERSION }} — Laravel {{ app()->version() }}</span>
+
+            <div class="flex items-center gap-3 sm:gap-6">
+                <x-laravel-exceptions-renderer::theme-switcher />
             </div>
         </div>
     </div>
-</x-laravel-exceptions-renderer::card>
+</header>
