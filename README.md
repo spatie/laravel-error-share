@@ -27,7 +27,7 @@ You can install the package via composer:
 composer require spatie/laravel-error-share
 ```
 
-That's it. Trigger an error and now you'll see a share button.
+That's it. Trigger an error and you'll see a share button.
 
 ## Testing
 
