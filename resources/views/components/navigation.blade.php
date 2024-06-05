@@ -21,8 +21,8 @@
             </div>
 
             <div class="flex items-center gap-3 sm:gap-6">
-                <x-laravel-exceptions-renderer::error-share :exception="$exception"/>
-                <x-laravel-exceptions-renderer::theme-switcher/>
+                <x-laravel-exceptions-renderer::error-share :exception="$exception" />
+                <x-laravel-exceptions-renderer::theme-switcher />
             </div>
         </div>
     </div>
