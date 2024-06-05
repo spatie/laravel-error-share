@@ -70,12 +70,12 @@ it('will map request info', function () {
             'some-data' => 42,
         ],
         headers: [
-            'X-KEY' => '123'
+            'X-KEY' => '123',
         ]
     )->json();
 
     expect($properties['context']['request']['url'])->toBe('http://localhost/hi-there');
-    expect($properties['context']['request']['ip'])->toBe("127.0.0.1");
+    expect($properties['context']['request']['ip'])->toBe('127.0.0.1');
     expect($properties['context']['request']['method'])->toBe('POST');
     expect($properties['context']['request']['useragent'])->toBeString();
 

@@ -8,6 +8,6 @@ class TestException extends Exception
 {
     public function __construct()
     {
-        parent::__construct("RIP Ignition");
+        parent::__construct('RIP Ignition');
     }
 }

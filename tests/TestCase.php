@@ -4,7 +4,6 @@ namespace Spatie\LaravelErrorShare\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Spatie\LaravelErrorShare\LaravelErrorShareServiceProvider;
@@ -31,7 +30,7 @@ class TestCase extends Orchestra
     {
         config()->set('database.default', 'testing');
 
-        Schema::create('users', function (Blueprint $blueprint){
+        Schema::create('users', function (Blueprint $blueprint) {
             $blueprint->increments('id');
 
             $blueprint->string('name');

@@ -17,7 +17,8 @@ it('can get properties', function () {
 it('will handle a mapping error gracefully', function () {
     $exception = createLaravelException(new TestException());
 
-    app()->bind(MapLaravelExceptionAction::class, fn () => new class extends MapLaravelExceptionAction {
+    app()->bind(MapLaravelExceptionAction::class, fn () => new class extends MapLaravelExceptionAction
+    {
         public function __construct()
         {
             // We're fake

@@ -13,8 +13,6 @@ class ResolveErrorSharePropertiesAction
     }
 
     /**
-     * @param Exception $exception
-     *
      * @return array{url: string, report: array}|array{error: string}
      */
     public function execute(Exception $exception): array
@@ -28,7 +26,7 @@ class ResolveErrorSharePropertiesAction
             ];
         } catch (Throwable $t) {
             return [
-                'error' => $t->getMessage()
+                'error' => $t->getMessage(),
             ];
         }
     }

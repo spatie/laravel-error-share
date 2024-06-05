@@ -2,9 +2,8 @@
 
 use Spatie\LaravelErrorShare\Actions\MapLaravelExceptionAction;
 use Spatie\LaravelErrorShare\Tests\Stubs\ExceptionFactory;
-use Spatie\LaravelErrorShare\Tests\Stubs\TestException;
 
-it('will map a stack trace', function (){
+it('will map a stack trace', function () {
     $mapped = resolve(MapLaravelExceptionAction::class)->execute(
         createLaravelException((new ExceptionFactory())->execute())
     );
