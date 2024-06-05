@@ -24,9 +24,9 @@ class ResolveErrorSharePropertiesAction
                 'url' => Str::of(config('error-share.endpoint'))->rtrim('/')->append('/api/public-reports'),
                 'report' => $report,
             ];
-        } catch (Throwable $t) {
+        } catch (Throwable $exception) {
             return [
-                'error' => $t->getMessage(),
+                'error' => $exception->getMessage(),
             ];
         }
     }
