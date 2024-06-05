@@ -11,24 +11,31 @@
             shared: false,
             sharedUrl: null,
             shareError: null,
+
             toggle() {
                 if (this.sharePanelOpen) {
-                    return this.close()
+                    return this.close();
                 }
 
-                this.$refs.button.focus()
+                this.$refs.button.focus();
 
-                this.sharePanelOpen = true
+                this.sharePanelOpen = true;
             },
+
             close(focusAfter) {
-                if (! this.sharePanelOpen) return
+                if (!this.sharePanelOpen) {
+                    return;
+                }
 
-                this.sharePanelOpen = false
+                this.sharePanelOpen = false;
 
-                focusAfter && focusAfter.focus()
+                if (focusAfter) {
+                    focusAfter.focus();
+                }
             },
+
             sendShare() {
-                if(! this.shareStack && ! this.shareContext && ! this.shareDebug){
+                if (!this.shareStack && !this.shareContext && !this.shareDebug) {
                     this.shareError = 'you must select at least one tab to share';
 
                     return;
@@ -40,14 +47,18 @@
 
                 if (this.shareStack) {
                     tabs.push('stackTraceTab');
-                }else{
+                } else {
                     report.stacktrace = report.stacktrace.slice(0, 1);
                 }
 
                 if (this.shareContext) {
                     tabs.push('contextTab', 'requestTab', 'appTab', 'userTab');
-                }else{
-                    report.context.request_data = { queryString: {}, body: {}, files: [] };
+                } else {
+                    report.context.request_data = {
+                        queryString: {},
+                        body: {},
+                        files: [],
+                    };
                     report.context.headers = {};
                     report.context.cookies = {};
                     report.context.route = null;
@@ -55,7 +66,7 @@
 
                 if (this.shareDebug) {
                     tabs.push('debugTab');
-                }else{
+                } else {
                     report.context.queries = [];
                 }
 
@@ -63,7 +74,7 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Accept': 'application/json',
+                        Accept: 'application/json',
                     },
                     body: JSON.stringify({
                         report,
@@ -71,21 +82,22 @@
                         lineSelection: window.location.hash,
                     }),
                 })
-                    .then(response => {
+                    .then((response) => {
                         if (response.ok) {
                             return response.json(); // parse the response body as JSON
                         } else {
                             throw new Error('could not share the error to Flare');
                         }
                     })
-                    .then(data => {
+                    .then((data) => {
                         this.sharedUrl = data.owner_url;
                         this.shared = true;
                     })
-                    .catch(error => {
+                    .catch((error) => {
                         this.shareError = error;
                     });
             },
+
             copySharedUrlToClipboard() {
                 const el = document.createElement('textarea');
                 el.value = this.sharedUrl;
@@ -93,7 +105,7 @@
                 el.select();
                 document.execCommand('copy');
                 document.body.removeChild(el);
-            }
+            },
         }"
         x-on:keydown.escape.prevent.stop="close($refs.button)"
         x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
