@@ -1,6 +1,6 @@
 {
     "name": "spatie/laravel-error-share",
-    "description": "Share your Laravel errors to Flare like in the old days",
+    "description": "Share your Laravel errors to Flare",
     "keywords": [
         "Spatie",
         "laravel",
