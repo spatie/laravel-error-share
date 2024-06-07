@@ -6,7 +6,8 @@
         "laravel",
         "flare",
         "errors",
-        "laravel-error-share"
+        "laravel-error-share",
+        "dev"
     ],
     "homepage": "https://github.com/spatie/laravel-error-share",
     "license": "MIT",
