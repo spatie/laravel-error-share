@@ -24,7 +24,7 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 You can install the package via composer:
 
 ```bash
-composer require spatie/laravel-error-share
+composer require spatie/laravel-error-share --dev
 ```
 
 That's it. Trigger an error and you'll see a share button.
