@@ -9,8 +9,7 @@ class MapLaravelExceptionAction
 {
     public function __construct(
         protected MapLaravelStackTraceAction $mapLaravelStackTraceAction
-    ) {
-    }
+    ) {}
 
     public function execute(Exception $exception): array
     {

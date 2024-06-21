@@ -21,7 +21,6 @@ class LaravelErrorShareServiceProvider extends PackageServiceProvider
             ->name('laravel-error-share')
             ->hasConfigFile();
 
-
         if ($this->canIncludeViews()) {
             $package->hasViews();
         }

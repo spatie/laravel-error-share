@@ -9,8 +9,7 @@ class MapLaravelStackTraceAction
 {
     public function __construct(
         protected ?int $maxFrames = null,
-    ) {
-    }
+    ) {}
 
     public function execute(Exception $exception): array
     {

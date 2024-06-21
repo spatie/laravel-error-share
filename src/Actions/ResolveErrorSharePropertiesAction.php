@@ -8,9 +8,7 @@ use Throwable;
 
 class ResolveErrorSharePropertiesAction
 {
-    public function __construct(protected MapLaravelExceptionAction $laravelExceptionAction)
-    {
-    }
+    public function __construct(protected MapLaravelExceptionAction $laravelExceptionAction) {}
 
     /**
      * @return array{url: string, report: array}|array{error: string}
