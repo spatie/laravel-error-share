@@ -2,6 +2,12 @@
 
 All notable changes to `laravel-error-share` will be documented in this file.
 
+## 1.0.2 - 2024-06-21
+
+- Fix an issue where a Laravel install could not be optimized anymore
+
+**Full Changelog**: https://github.com/spatie/laravel-error-share/compare/1.0.1...1.0.2
+
 ## 1.0.1 - 2024-06-07
 
 ### What's Changed
