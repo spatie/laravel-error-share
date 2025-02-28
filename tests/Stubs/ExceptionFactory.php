@@ -6,6 +6,6 @@ class ExceptionFactory
 {
     public function execute()
     {
-        return new TestException();
+        return new TestException;
     }
 }

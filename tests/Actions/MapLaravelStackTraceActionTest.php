@@ -5,14 +5,14 @@ use Spatie\LaravelErrorShare\Tests\Stubs\ExceptionFactory;
 
 it('will map a stack trace', function () {
     $mapped = resolve(MapLaravelExceptionAction::class)->execute(
-        createLaravelException((new ExceptionFactory())->execute())
+        createLaravelException((new ExceptionFactory)->execute())
     );
 
     expect($mapped['stacktrace'][0])->toBeArray();
     expect($mapped['stacktrace'][0]['file'])->toBe(realpath(__DIR__.'/../Stubs/ExceptionFactory.php'));
     expect($mapped['stacktrace'][0]['line_number'])->toBe(9);
     expect($mapped['stacktrace'][0]['method'])->toBe('execute');
-    //expect($mapped['stacktrace'][0]['class'])->toBe(ExceptionFactory::class);
+    // expect($mapped['stacktrace'][0]['class'])->toBe(ExceptionFactory::class);
     expect($mapped['stacktrace'][0]['code_snippet'])
         ->toBeArray()
         ->toHaveKey(4)

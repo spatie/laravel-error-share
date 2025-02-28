@@ -8,7 +8,7 @@ use Spatie\LaravelErrorShare\Tests\Stubs\TestException;
 
 it('will map a laravel exception', function () {
     $mapped = resolve(MapLaravelExceptionAction::class)->execute(
-        createLaravelException($exception = new TestException())
+        createLaravelException($exception = new TestException)
     );
 
     expect($mapped)->toBeArray();
@@ -43,7 +43,7 @@ it('will map queries made', function () {
     DB::table('users')->get();
 
     $properties = resolve(MapLaravelExceptionAction::class)->execute(
-        createLaravelException(new TestException(), listener: $listener)
+        createLaravelException(new TestException, listener: $listener)
     );
 
     expect($properties['context']['queries'])->toBeArray()->toHaveCount(1);
@@ -60,7 +60,7 @@ it('will map queries made', function () {
 it('will map request info', function () {
     Route::post('/hi-there', function () {
         return resolve(MapLaravelExceptionAction::class)->execute(
-            createLaravelException(new TestException())
+            createLaravelException(new TestException)
         );
     });
 
@@ -89,7 +89,7 @@ it('will map request info', function () {
 it('will map route info', function () {
     Route::get('/route/{id}', function (int $id) {
         return resolve(MapLaravelExceptionAction::class)->execute(
-            createLaravelException(new TestException())
+            createLaravelException(new TestException)
         );
     })->name('route');
 

@@ -6,7 +6,7 @@ use Spatie\LaravelErrorShare\Actions\ResolveErrorSharePropertiesAction;
 use Spatie\LaravelErrorShare\Tests\Stubs\TestException;
 
 it('can get properties', function () {
-    $exception = createLaravelException(new TestException());
+    $exception = createLaravelException(new TestException);
 
     $properties = app(ResolveErrorSharePropertiesAction::class)->execute($exception);
 
@@ -15,7 +15,7 @@ it('can get properties', function () {
 });
 
 it('will handle a mapping error gracefully', function () {
-    $exception = createLaravelException(new TestException());
+    $exception = createLaravelException(new TestException);
 
     app()->bind(MapLaravelExceptionAction::class, fn () => new class extends MapLaravelExceptionAction
     {

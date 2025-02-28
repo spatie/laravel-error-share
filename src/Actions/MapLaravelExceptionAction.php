@@ -16,7 +16,7 @@ class MapLaravelExceptionAction
         return [
             'notifier' => 'laravel-error-share',
             'exception_class' => $exception->class(),
-            'seen_at' => (new DateTimeImmutable())->getTimestamp(),
+            'seen_at' => (new DateTimeImmutable)->getTimestamp(),
             'application_path' => app_path(),
             'message' => $exception->message(),
             'language' => 'PHP',
