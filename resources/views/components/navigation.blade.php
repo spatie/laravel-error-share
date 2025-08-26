@@ -21,6 +21,11 @@
             </div>
 
             <div class="flex items-center gap-3 sm:gap-6">
+                @includeWhen(
+                    view()->exists('laravel-exceptions-renderer::components.copy-button'),
+                    'laravel-exceptions-renderer::components.copy-button',
+                    ['markdown' => $exceptionAsMarkdown]
+                )
                 <x-laravel-exceptions-renderer::error-share :exception="$exception" />
                 <x-laravel-exceptions-renderer::theme-switcher />
             </div>
