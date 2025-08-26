@@ -2,6 +2,20 @@
 
 All notable changes to `laravel-error-share` will be documented in this file.
 
+## 1.0.4 - 2025-08-26
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.3.0 to 2.4.0 by @dependabot[bot] in https://github.com/spatie/laravel-error-share/pull/6
+* Bump aglipanci/laravel-pint-action from 2.5 to 2.6 by @dependabot[bot] in https://github.com/spatie/laravel-error-share/pull/8
+* Add new Copy as Markdown button by @marventhieme in https://github.com/spatie/laravel-error-share/pull/10
+
+### New Contributors
+
+* @marventhieme made their first contribution in https://github.com/spatie/laravel-error-share/pull/10
+
+**Full Changelog**: https://github.com/spatie/laravel-error-share/compare/1.0.3...1.0.4
+
 ## 1.0.3 - 2025-02-28
 
 ### What's Changed
