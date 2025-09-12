@@ -2,6 +2,22 @@
 
 All notable changes to `laravel-error-share` will be documented in this file.
 
+## 1.0.5 - 2025-09-12
+
+### What's Changed
+
+* Bump actions/checkout from 4 to 5 by @dependabot[bot] in https://github.com/spatie/laravel-error-share/pull/9
+* Bump stefanzweifel/git-auto-commit-action from 5 to 6 by @dependabot[bot] in https://github.com/spatie/laravel-error-share/pull/7
+* Update issue template by @AlexVanderbist in https://github.com/spatie/laravel-error-share/pull/12
+* Fix error Undefined variable $exceptionAsMarkdown by @dbpolito in https://github.com/spatie/laravel-error-share/pull/13
+
+### New Contributors
+
+* @AlexVanderbist made their first contribution in https://github.com/spatie/laravel-error-share/pull/12
+* @dbpolito made their first contribution in https://github.com/spatie/laravel-error-share/pull/13
+
+**Full Changelog**: https://github.com/spatie/laravel-error-share/compare/1.0.4...1.0.5
+
 ## 1.0.4 - 2025-08-26
 
 ### What's Changed
