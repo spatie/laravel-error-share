@@ -2,6 +2,18 @@
 
 All notable changes to `laravel-error-share` will be documented in this file.
 
+## 1.0.6 - 2025-09-18
+
+### What's Changed
+
+* Fix failing view compilation in Laravel > 12.29 by @SanderSander in https://github.com/spatie/laravel-error-share/pull/15
+
+### New Contributors
+
+* @SanderSander made their first contribution in https://github.com/spatie/laravel-error-share/pull/15
+
+**Full Changelog**: https://github.com/spatie/laravel-error-share/compare/1.0.5...1.0.6
+
 ## 1.0.5 - 2025-09-12
 
 ### What's Changed
