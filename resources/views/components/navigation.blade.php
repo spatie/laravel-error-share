@@ -28,7 +28,9 @@
                     )
                 @endif
                 <x-laravel-exceptions-renderer::error-share :exception="$exception" />
-                <x-laravel-exceptions-renderer::theme-switcher />
+                @if (view()->exists('laravel-exceptions-renderer::theme-switcher'))
+                    <x-dynamic-component name="laravel-exceptions-renderer::theme-switcher" />
+                @endif
             </div>
         </div>
     </div>
