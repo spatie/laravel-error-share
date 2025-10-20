@@ -39,7 +39,7 @@
                     return;
                 }
 
-                let report = {{ Js::from($properties['report']) }};
+                let report = @js($properties['report']);
 
                 let tabs = [];
 
