@@ -2,6 +2,19 @@
 
 All notable changes to `laravel-error-share` will be documented in this file.
 
+## 1.0.7 - 2025-10-20
+
+### What's Changed
+
+* Fix error share view render by @guiiamorim in https://github.com/spatie/laravel-error-share/pull/17
+* Bump stefanzweifel/git-auto-commit-action from 6 to 7 by @dependabot[bot] in https://github.com/spatie/laravel-error-share/pull/16
+
+### New Contributors
+
+* @guiiamorim made their first contribution in https://github.com/spatie/laravel-error-share/pull/17
+
+**Full Changelog**: https://github.com/spatie/laravel-error-share/compare/1.0.6...1.0.7
+
 ## 1.0.6 - 2025-09-18
 
 ### What's Changed
