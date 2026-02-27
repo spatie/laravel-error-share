@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-error-share` will be documented in this file.
 
+## 1.0.8 - 2026-02-27
+
+Add support for Laravel 13
+
 ## 1.0.7 - 2025-10-20
 
 ### What's Changed
