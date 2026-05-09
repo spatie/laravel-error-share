@@ -25,7 +25,7 @@ class MapLaravelExceptionAction
             'application_version' => null,
             'stage' => app()->environment(),
             'message_level' => null,
-            'open_frame_index' => $exception->defaultFrame(),
+            'open_frame_index' => $this->resolveOpenFrameIndex($exception),
             'glows' => [],
             'solutions' => [],
             'context' => $this->resolveContext($exception),
@@ -34,6 +34,17 @@ class MapLaravelExceptionAction
             'tracking_uuid' => null,
             'handled' => null,
         ];
+    }
+
+    protected function resolveOpenFrameIndex(Exception $exception): int
+    {
+        foreach ($exception->frames() as $index => $frame) {
+            if ($frame->isMain()) {
+                return $index;
+            }
+        }
+
+        return 0;
     }
 
     protected function resolveContext(Exception $exception): array
