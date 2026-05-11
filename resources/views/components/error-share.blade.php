@@ -112,7 +112,7 @@
             :aria-expanded="sharePanelOpen"
             :aria-controls="$id('dropdown-button')"
             type="button"
-            class="flex items-center gap-2 rounded-md hover:bg-gray-100/75 hover:bg-gray-100 p-1 text-sm leading-5 text-gray-900 dark:hover:bg-gray-800/75 dark:text-white"
+            class="flex items-center gap-2 rounded-md hover:bg-neutral-100 p-1 text-sm text-neutral-900 dark:hover:bg-white/10 dark:text-white"
         >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m15 15 6-6m0 0-6-6m6 6H9a6 6 0 0 0 0 12h3" />
@@ -126,14 +126,14 @@
             x-show="sharePanelOpen"
             x-on:click.outside="close($refs.button)"
             :id="$id('dropdown-button')"
-            style="display: none; width: 15rem"
-            class="absolute right-0 z-10 flex origin-top-right flex-col rounded-md bg-white dark:text-white shadow-xl ring-1 ring-gray-900/5 dark:bg-gray-800"
+            style="display: none; width: 15rem; margin-top: 0.5rem;"
+            class="absolute right-0 z-50 flex flex-col rounded-md border border-neutral-200 bg-white shadow-xs dark:border-white/10 dark:bg-neutral-800 dark:text-white"
         >
-            <div class="flex flex-col gap-2 p-6">
+            <div class="flex flex-col gap-4 p-5">
                 <div class="flex items-center justify-between">
                     <h2 class="font-semibold">Share with Flare</h2>
                     <a
-                        class="text-gray-500 dark:text-white"
+                        class="text-neutral-500 dark:text-white"
                         href="https://flareapp.io/docs/ignition/introducing-ignition/sharing-errors?utm_campaign=ignition&amp;utm_source=ignition"
                         target="_blank"
                         rel="noreferrer"
@@ -159,8 +159,8 @@
                 </ul>
                 <div>
                     <button
-                        style="background-color: rgb(139, 92, 246); color: white"
-                        class="text-sm rounded-full px-3 py-2 flex gap-2 font-bold leading-5"
+                        style="background-color: rgb(139, 92, 246); color: white; padding-top: 0.5rem; padding-bottom: 0.5rem;"
+                        class="text-sm rounded-full px-3 flex gap-2 font-bold w-fit"
                         type="submit"
                         x-on:click="sendShare()"
                     >
@@ -171,7 +171,7 @@
                     </button>
                 </div>
                 <template x-if="shareError">
-                    <p class="p-2 text-xs border-l-red-500 text-red-500 bg-red-500/20 rounded-md bg-color" x-text="shareError"></p>
+                    <p class="p-2 text-xs rounded-md" style="background: rgba(239, 68, 68, 0.10); color: rgb(220, 38, 38); border-left: 3px solid rgb(239, 68, 68);" x-text="shareError"></p>
                 </template>
             </div>
         </div>
