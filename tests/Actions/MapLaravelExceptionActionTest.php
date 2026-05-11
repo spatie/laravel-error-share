@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Contracts\Events\Dispatcher;
+use Illuminate\Foundation\Exceptions\Renderer\Listener;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Spatie\LaravelErrorShare\Actions\MapLaravelExceptionAction;
@@ -34,7 +35,7 @@ it('will map a laravel exception', function () {
 });
 
 it('will map queries made', function () {
-    $listener = app(Illuminate\Foundation\Exceptions\Renderer\Listener::class);
+    $listener = app(Listener::class);
 
     $listener->registerListeners(
         app(Dispatcher::class)

@@ -22,7 +22,7 @@ function createLaravelException(?Throwable $throwable = null, ?Request $request 
     return new LaravelException(
         $flattenException,
         $request ?? \request(),
-        $listener ?? app(Illuminate\Foundation\Exceptions\Renderer\Listener::class),
+        $listener ?? app(Listener::class),
         base_path()
     );
 }
