@@ -2,6 +2,21 @@
 
 All notable changes to `laravel-error-share` will be documented in this file.
 
+## 1.0.9 - 2026-05-11
+
+### What's Changed
+
+* Bump ramsey/composer-install from 3 to 4 by @dependabot[bot] in https://github.com/spatie/laravel-error-share/pull/21
+* Bump dependabot/fetch-metadata from 2.5.0 to 3.0.0 by @dependabot[bot] in https://github.com/spatie/laravel-error-share/pull/22
+* Bump dependabot/fetch-metadata from 3.0.0 to 3.1.0 by @dependabot[bot] in https://github.com/spatie/laravel-error-share/pull/23
+* Fix Laravel 12 compatibility by @brunolipe-a in https://github.com/spatie/laravel-error-share/pull/25
+
+### New Contributors
+
+* @brunolipe-a made their first contribution in https://github.com/spatie/laravel-error-share/pull/25
+
+**Full Changelog**: https://github.com/spatie/laravel-error-share/compare/1.0.8...1.0.9
+
 ## 1.0.8 - 2026-02-27
 
 Add support for Laravel 13
