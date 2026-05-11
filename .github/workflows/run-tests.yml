@@ -44,7 +44,7 @@ jobs:
 
       - name: Require Pest 4 for Laravel 13
         if: matrix.laravel == '13.*'
-        run: composer require "pestphp/pest:^4.0" "pestphp/pest-plugin-laravel:^4.1" "pestphp/pest-plugin-arch:^4.0" --dev --no-interaction --no-update
+        run: composer require "pestphp/pest:^4.4.1" "pestphp/pest-plugin-laravel:^4.1" "pestphp/pest-plugin-arch:^4.0" --dev --no-interaction --no-update
 
       - name: Install dependencies
         run: |
