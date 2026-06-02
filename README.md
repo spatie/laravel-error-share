@@ -1,8 +1,8 @@
 # Share your Laravel errors
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-error-share.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-error-share)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/spatie/laravel-error-share/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/spatie/laravel-error-share/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/spatie/laravel-error-share/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/spatie/laravel-error-share/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![GitHub Tests Action Status](https://github.com/spatie/laravel-error-share/actions/workflows/run-tests.yml/badge.svg)](https://github.com/spatie/laravel-error-share/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://github.com/spatie/laravel-error-share/actions/workflows/fix-php-code-style-issues.yml/badge.svg)](https://github.com/spatie/laravel-error-share/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-error-share.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-error-share)
 
 Imagine that you’re working on a project locally and that you bump into an exception. You try to figure out what the problem is, but you’re unable to find a solution. In that case, you might want to ask a colleague for help. 
