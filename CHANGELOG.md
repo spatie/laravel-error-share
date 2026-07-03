@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-error-share` will be documented in this file.
 
+## 1.0.10 - 2026-07-03
+
+### What's Changed
+
+* Allow installation on PHP 8.1 and Laravel 10/11 by @rubenvanassche in https://github.com/spatie/laravel-error-share/pull/27
+
+**Full Changelog**: https://github.com/spatie/laravel-error-share/compare/1.0.9...1.0.10
+
 ## 1.0.9 - 2026-05-11
 
 ### What's Changed
