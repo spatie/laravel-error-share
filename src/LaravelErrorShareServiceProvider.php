@@ -2,7 +2,6 @@
 
 namespace Spatie\LaravelErrorShare;
 
-use Illuminate\Foundation\Exceptions\Renderer\Frame;
 use Illuminate\Support\Facades\View;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -38,7 +37,7 @@ class LaravelErrorShareServiceProvider extends PackageServiceProvider
     protected function exceptionRendererIsSupported(): bool
     {
         // The renderer API and blade components this package integrates with only exist on Laravel 12 and up.
-        return method_exists(Frame::class, 'isMain');
+        return version_compare($this->app->version(), '12.0.0', '>=');
     }
 
     protected function canIncludeViews(): bool
