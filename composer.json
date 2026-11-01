@@ -77,10 +77,7 @@
         "laravel": {
             "providers": [
                 "Spatie\\LaravelErrorShare\\LaravelErrorShareServiceProvider"
-            ],
-            "aliases": {
-                "LaravelErrorShare": "Spatie\\LaravelErrorShare\\Facades\\LaravelErrorShare"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
