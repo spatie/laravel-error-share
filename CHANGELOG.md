@@ -2,6 +2,17 @@
 
 All notable changes to `laravel-error-share` will be documented in this file.
 
+## 1.0.11 - 2026-11-04
+
+### Fixes
+
+* Remove the package-discovery alias for the nonexistent `LaravelErrorShare` facade, preventing class and property lookups from throwing. Fixes #28 via #29 by @MohannadElemary.
+* Add alias-lookup regression coverage and run the test suite and PHPStan on pull requests.
+
+No supported PHP or Laravel versions, configuration keys, or error-sharing UI were changed.
+
+**Full Changelog**: https://github.com/spatie/laravel-error-share/compare/1.0.10...1.0.11
+
 ## 1.0.10 - 2026-07-03
 
 ### What's Changed
